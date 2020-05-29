@@ -1,10 +1,11 @@
 import { createReducer, on } from '@ngrx/store';
 import { events } from './fake-data/fake-events'
 import { Evento } from './model/Evento';
-import { Agregar, Modificar } from './events.actions';
+import { Agregar, Modificar, CambiarId } from './events.actions';
 import { from } from 'rxjs';
 
-export let eventos = events;
+let eventos = events;
+let initialId = 0;
 
 export const eventReducer = createReducer(
   eventos,
@@ -28,5 +29,10 @@ export const eventReducer = createReducer(
       return evento;
     });
     return listaModificada;
-  }),
+  })
+);
+
+export const idReducer = createReducer(
+  initialId,
+  on(CambiarId, (state, { id } ) => id)
 );

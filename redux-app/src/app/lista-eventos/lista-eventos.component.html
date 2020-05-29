@@ -3,6 +3,6 @@
     <h5 class="card-title">{{ evento.Nombre }}</h5>
     <p class="card-text">{{ evento.Descripcion }}</p>
     <h6 class="card-subtitle mb-2 text-muted">{{ evento.Fecha }} - {{ evento.Estado }}</h6>
-    <button class="btn btn-primary"><i class="fas fa-pencil"></i> Editar</button>
+    <button (click)="CambiarId(evento.Id)" class="btn btn-primary" type="button" data-toggle="modal" data-target="#modificarEvento">Editar</button>
   </div>
 </div>

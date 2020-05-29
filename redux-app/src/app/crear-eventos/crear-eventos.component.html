@@ -1,1 +1,27 @@
-<p>crear-eventos works!</p>
+<form class="">
+    <div class="form-group">
+        <label>Nombre del evento</label>
+        <input type="text" class="form-control" name="nombre" [(ngModel)]="NombreEvento">
+    </div>
+    <div class="form-group">
+        <label>¿De qué se trata?</label>
+        <input type="text" class="form-control" name="descripcion" [(ngModel)]="DescripcionEvento">
+    </div>
+    <div class="form-group">
+        <label>Fecha</label>
+        <input type="date" class="form-control" name="fecha" [(ngModel)]="FechaEvento">
+    </div>
+    <div class="form-group">
+        <label>Estado</label>
+        <select name="" id="" class="form-control" name="estado" [(ngModel)]="EstadoEvento">
+            <option value="Iniciado">Iniciado</option>
+            <option value="En curso">En curso</option>
+            <option value="Finalizado">Finalizado</option>
+        </select>
+    </div>
+    <div class="text-center">
+        <button (click)="AgregarEvento()" class="btn btn-success" onClick="$('#crearEvento').modal('hide')">
+            Crear
+        </button>
+    </div>
+</form>

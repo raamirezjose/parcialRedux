@@ -21,10 +21,6 @@ export class AppComponent {
 
   }
 
-  AgregarEvento(eventoIn: Evento) {
-    this.store.dispatch(actions.Agregar({ eventoIn }));
-  }
-
   
   ModificarEvento(eventoIn: Evento) {
     this.store.dispatch(actions.Modificar({ eventoIn }));
