@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
-import { Store, select, State } from '@ngrx/store';
+import { Store } from '@ngrx/store';
 
 import * as actions from './events.actions';
-import { from } from 'rxjs';
+import { Evento } from './model/Evento';
 
-interface AppState {
-  contador: number;
-}
 
 @Component({
   selector: 'app-root',
@@ -14,20 +11,23 @@ interface AppState {
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  contador: number;
+  eventos: [Evento];
 
-  constructor(private store: Store<AppState>) {
-    
+  constructor(private store: Store<[Evento]>) {
+
     this.store.subscribe((state) => {
-      this.contador = state.contador;
+      this.eventos = state;
     });
+
   }
 
-  AgregarEvento() {
-    this.store.dispatch(actions.aumentar());
+  AgregarEvento(eventoIn: Evento) {
+    this.store.dispatch(actions.Agregar({ eventoIn }));
   }
 
-  ModificarEvento() {
-    this.store.dispatch(actions.disminuir());
+  
+  ModificarEvento(eventoIn: Evento) {
+    this.store.dispatch(actions.Modificar({ eventoIn }));
   }
+
 }

@@ -1,0 +1,8 @@
+<div *ngFor="let evento of eventos" class="card mb-3">
+  <div class="card-body">
+    <h5 class="card-title">{{ evento.Nombre }}</h5>
+    <p class="card-text">{{ evento.Descripcion }}</p>
+    <h6 class="card-subtitle mb-2 text-muted">{{ evento.Fecha }} - {{ evento.Estado }}</h6>
+    <button class="btn btn-primary"><i class="fas fa-pencil"></i> Editar</button>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 export interface Evento {
     Id: number,
-    Nombre: String;
-    Descripcion: String;
-    Fecha: String;
-    Estado: String;
+    Nombre: string;
+    Descripcion: string;
+    Fecha: string;
+    Estado: string;
 }
