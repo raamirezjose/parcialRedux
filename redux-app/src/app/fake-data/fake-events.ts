@@ -19,6 +19,6 @@ export let events: Evento[] = [
         Nombre: "Cine arte - Película aburrida",
         Descripcion: "Película con tono sepia, algo deprimente",
         Fecha: "2020-05-29",
-        Estado: "En progreso",
+        Estado: "En curso",
     }
 ]

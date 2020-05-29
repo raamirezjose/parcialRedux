@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store, select, State } from '@ngrx/store';
 
-import * as actions from './contador.actions';
+import * as actions from './events.actions';
 import { from } from 'rxjs';
 
 interface AppState {
@@ -23,11 +23,11 @@ export class AppComponent {
     });
   }
 
-  Aumentar() {
+  AgregarEvento() {
     this.store.dispatch(actions.aumentar());
   }
 
-  Disminuir() {
+  ModificarEvento() {
     this.store.dispatch(actions.disminuir());
   }
 }

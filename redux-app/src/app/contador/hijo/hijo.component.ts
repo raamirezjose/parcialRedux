@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 import { __importDefault } from 'tslib';
 import { EventEmitter } from 'protractor';
 import { Store, select, State } from '@ngrx/store';
-import { multiplicar, dividir } from 'src/app/contador.actions';
+import { multiplicar, dividir } from 'src/app/events.actions';
 
 interface AppState {
   contador: number;
